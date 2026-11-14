@@ -3,10 +3,11 @@
 Static data for the Mountain Peak watch app, served by GitHub Pages at
 `https://ataflorin.github.io/mountain-peak-data/`.
 
-One file per 1 x 1 degree tile, `v1/tiles/N46E025.json` (named after its south-west corner),
-with the named summits in it and its terrain; `v1/index.json` lists the tiles and the country
-each lies in. The format is described in `tools/make_data.py` of the app, which writes these
-files.
+Per 1 x 1 degree tile (named after its south-west corner, `N46E025`): `v1/t/N46E025.json`
+(its country and how many files it has), its summits in `v1/p/N46E025.<i>.json` and its terrain
+in four quarters `v1/d/N46E025.<q>.json`, every file a few kilobytes so that a watch can take it.
+`v1/index.json` lists the tiles and the country each lies in. The format is described in
+`tools/make_data.py` of the app, which writes these files.
 
 ## Sources
 
